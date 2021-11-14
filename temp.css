@@ -1,0 +1,174 @@
+/*
+    word-wrap:break-word;
+    word-break: keep-all;
+*/
+* {
+    text-decoration: none;
+    list-style-type: none;
+}
+html{
+    display: flex;
+    align-items : center;
+    justify-content: center;
+}
+body
+{
+    padding: 0;
+    margin: 0;
+}
+header
+{
+    width:100%; height: 50px;
+    display: flex;
+    align-items : center;
+    justify-content: center;
+}
+
+ul
+{
+    width:100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+/*
+.menubar {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    
+}
+.menubar li {
+    display: inline-block;
+    padding-left: 40px;
+    padding-right: 40px;
+}*/
+.wrapper
+{
+    text-align: center;
+    align-items : center;
+    max-width: 1000px;
+    margin: auto;
+    padding-left: 5%; padding-right: 5%; padding-bottom: 3%;
+}
+
+.plan{
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items : center;
+    margin: auto;
+    
+}
+.planA, .planB, .planC
+{
+    width: 180px; height:200px;
+    text-align: center;
+    margin: 30px 3px;
+}
+.planA
+{
+    background-color:#bbbbbb;
+}
+.planB
+{
+    background-color:#bbbbbb;
+}
+.planC
+{
+    background-color:#bbbbbb;
+}
+
+.planButton
+{
+    font-size: 18px;
+    font-weight: bold;
+    color:#000000;
+    background: #ffffff;
+    width: 80px;
+    height: 30px;
+    border: 0.5px solid;
+    border-radius: 20px;
+    text-align: center;
+    cursor: default;
+}
+.planButton:hover
+{
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #000000;
+    border-color: #ffffff;
+    animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    -webkit-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    -moz-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    transition: all 0.2s ease 0.2s;
+    -webkit-transition: all 0.2s ease 0.2s;
+    -moz-transition: all 0.2s ease 0.2s;
+}
+.productList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items : center;
+    max-width: 1000px;
+    margin:auto;
+}
+.card{
+    text-align: center;
+    margin: 30px 30px;
+
+    border: 1px solid #eeeeee;
+    height: 300px;
+    width: 200px;
+    padding: 10px;
+}
+.cardImg{
+    height: 150px;
+}
+.cardImg img{
+    height:100%;
+    width: auto;
+}
+.cardText h4{
+    font-size: 18px;
+}
+.cardText p{
+    text-align: center;
+    font-style:italic;
+    font-weight: bold;
+}
+.cardButton{
+    align-items : left;
+    font-size: 14px;
+    font-weight: bold;
+    color:#000000;
+    background: #ffffff;
+    width: 80px;
+    height: 28px;
+    border: 0.5px solid;
+    border-radius: 10px;
+    text-align: center;
+    cursor: default;
+}
+.cardButton:hover{
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #000000;
+    border-color: #ffffff;
+    animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    -webkit-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    -moz-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    transition: all 0.2s ease 0.2s;
+    -webkit-transition: all 0.2s ease 0.2s;
+    -moz-transition: all 0.2s ease 0.2s;
+}
+footer
+{
+    color: white;
+    background: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
