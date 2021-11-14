@@ -1,0 +1,68 @@
+* {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.shampoo_backg_img {
+    background: url("shampoo_backg.png") center center no-repeat;
+    background-size: cover;
+    height: 97vh;
+}
+
+
+.menubar {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    
+}
+
+.menubar li {
+    display: inline-block;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.space {
+    margin: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.content {
+    padding-top: 50px;
+}
+
+.shortcut_button {
+    text-align: right;
+    padding-top: 50px;
+    padding-right: 50px;
+}
+.result_button {
+    padding-top: 50px;
+    padding-right: 50px;
+}
+
+/*
+파일 업로드
+https://blog.naver.com/l1523/222554267809
+https://blog.naver.com/18rnjswldyd/222507908055
+
+https://blog.naver.com/alcmskfl17/221807281152
+https://amaze9001.tistory.com/69
+https://kakku.tistory.com/390
+https://kakku.tistory.com/386
+https://blog.naver.com/alcmskfl17/221807281152
+https://blog.naver.com/1012rnjsdydgns/222325981348
+https://blog.naver.com/xodbd0507/222490708563
+https://blog.naver.com/yujesang124/222030926798
+
+https://blog.naver.com/youhr21/222118740927
+https://www.functionofbeauty.com/
+https://www.acmicpc.net/
+*/
