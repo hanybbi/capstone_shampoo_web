@@ -6,7 +6,7 @@
 }
 
 .shampoo_backg_img {
-    background: url("shampoo_backg.png")
+    background: url("./img/shampoo_backg.png")
     center center no-repeat;
     background-attachment: fixed;
     background-size: cover;
