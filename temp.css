@@ -1,61 +1,240 @@
-/*
-    word-wrap:break-word;
-    word-break: keep-all;
-*/
+@import url("https://unpkg.com/aos@2.3.1/dist/aos.css");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 * {
     text-decoration: none;
     list-style-type: none;
+    color: inherit;
+    word-wrap:break-word;
+    word-break: keep-all;
 }
-html{
+html {
     display: flex;
     align-items : center;
     justify-content: center;
+    scroll-behavior:smooth;
 }
-body
-{
+body {
     padding: 0;
     margin: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+
 }
-header
-{
-    width:100%; height: 50px;
+body, .middle, .wrapper, .first, .second, .third, .fourth{
+    position: relative;
+}
+
+/* 메뉴 바 */
+header {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    right: 0;
+    width:100%; height: 80px;
     display: flex;
     align-items : center;
     justify-content: center;
-}
+    color: white;
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
 
-ul
-{
-    width:100%;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
+}
+header a{
+    display: block;
+    align-items : center;
     justify-content: space-around;
-
+    font-size: 20px;
+    padding: 0.92em;
 }
-/*
+header a:hover {
+    color: #2b5876;
+    border-bottom: solid 1px #ffffff;
+}
 .menubar {
     text-align: center;
     padding-top: 25px;
     padding-bottom: 30px;
-    
 }
 .menubar li {
     display: inline-block;
     padding-left: 40px;
     padding-right: 40px;
-}*/
-.wrapper
-{
-    text-align: center;
-    align-items : center;
-    max-width: 1000px;
-    margin: auto;
-    padding-left: 5%; padding-right: 5%; padding-bottom: 3%;
 }
 
-.plan{
+/* index.html : 메인 페이지 */
+.shampoo_backg_img {
+    background: url("./img/shampoo_backg.png") 
+    center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width:100%; height: 900px;
+    display: flex;
+    align-items : center;
+    justify-content: flex-start;
+}
+.main_screen {
+    align-items : center;
+    justify-content: center;
+    padding-left: 15.0em;
+    color:#f1f1f1;
+    cursor: default;
+    
+}
+.main_screen h2 {
+    font-size: 8.0em;
+    font-family: 'Lobster', cursive;
+    filter: drop-shadow(10px 10px 0px #000);
+}
+.middle {
+    width:100%;
+    margin:auto;
+    min-height: 100vh;
+}
+.middle h2 {
+    font-size: 50px;
+}
+.middle p {
+    font-size: 25px;
+}
+.first, .second, .third, .fourth{
+    height: 20em;
+    padding: 20em;
+    border-top: 2px solid #dddddd;
+    display: flex;
+    align-items : center;
+}
+.first{
+    text-align: right;
+    justify-content: flex-end;
+}
+.second{
+    background-color: #fad0c4;
+}
+.third{
+    text-align: right;
+    justify-content: flex-end;
+}
+.fourth{
+    background-color: #e3eeff
+}
+.first .info_circle {
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: url("./img/shampoo_img_1.jpg") 
+    center center no-repeat;
+    background-size: cover;
+    margin : 10em;
+    display: block;
+    width: 35%;
+    height:auto;
+    border-radius: 100%;
+    box-shadow: 30px 50px 0px #ff9a9e;
+}
+.second .shampoo_img {
+    position: absolute;
+    top:0; right:0; bottom:0;
+    background: url("./img/shampoo_img_2.jpg") 
+    center center no-repeat;
+    background-size: cover;
+    margin : 10em;
+    display: block;
+    width: 35%;
+    height:auto;
+    border-radius: 100%;
+    border-right: 1px solid #fff;
+    box-shadow: -70px 0px 0px #bfd9fe;
+}
+.mainButton {
+    margin-top:2em;
+    font-size: 20px;
+    font-weight: bold;
+    color:#000000;
+    background: transparent;
+    width: 180px;
+    height: 50px;
+    border: 0.8px solid;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    align-items : center;
+    justify-content: center;
+    cursor: default;
+}
+.mainButton:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #000000;
+    border-color: #ffffff;
+    animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    -webkit-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    -moz-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    transition: all 0.2s ease 0.2s;
+    -webkit-transition: all 0.2s ease 0.2s;
+    -moz-transition: all 0.2s ease 0.2s;
+}
+.first .mainButton {
+    margin-left:68%;
+}
+.third .mainButton {
+    margin-left:58%;
+}
+
+/* 페이지 중간 부분 */
+.wrapper {
     max-width: 1000px;
+    margin: auto;
+    padding-left: 5%; 
+    padding-right: 5%; 
+    padding-bottom: 3%;
+    min-height: 100vh;
+    width: 100%;
+}
+.space {
+    margin: 70px;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+/*서비스 소개 페이지*/
+.space h3 {
+    font-size: 30px;
+}
+
+/* 추천기 화면 */
+.content {
+    padding-top: 50px;
+}
+.center_box {
+    width: 50%;
+    padding-left: 30%;
+    padding-right: 20%;
+}
+.shortcut_button {
+    float: right;
+    margin-top: 50px;
+    margin-right: 50px;
+    width: 150px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: #ccc;
+}
+.result_button {
+    margin-top: 50px;
+    margin-right: 50px;
+    width: 120px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: #ccc;
+}
+
+/* 구독 창 css */
+.plan {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -63,27 +242,21 @@ ul
     margin: auto;
     
 }
-.planA, .planB, .planC
-{
+.planA, .planB, .planC {
     width: 180px; height:200px;
     text-align: center;
     margin: 30px 3px;
 }
-.planA
-{
-    background-color:#bbbbbb;
+.planA {
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
 }
-.planB
-{
-    background-color:#bbbbbb;
+.planB {
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
 }
-.planC
-{
-    background-color:#bbbbbb;
+.planC {
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
 }
-
-.planButton
-{
+.planButton {
     font-size: 18px;
     font-weight: bold;
     color:#000000;
@@ -108,6 +281,8 @@ ul
     -webkit-transition: all 0.2s ease 0.2s;
     -moz-transition: all 0.2s ease 0.2s;
 }
+
+/* 상품 목록 css */
 .productList{
     display: flex;
     flex-wrap: wrap;
@@ -119,7 +294,6 @@ ul
 .card{
     text-align: center;
     margin: 30px 30px;
-
     border: 1px solid #eeeeee;
     height: 300px;
     width: 200px;
@@ -133,7 +307,7 @@ ul
     width: auto;
 }
 .cardText h4{
-    font-size: 18px;
+    font-size: 14px;
 }
 .cardText p{
     text-align: center;
@@ -165,10 +339,28 @@ ul
     -webkit-transition: all 0.2s ease 0.2s;
     -moz-transition: all 0.2s ease 0.2s;
 }
+
+/*footer 페이지*/
 footer
 {
+    position: absolute;
     color: white;
-    background: black;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    background: #ff9a9e;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items : center;
+    justify-content: center;
+}
+
+/*반응형? 삭제 가능성 있음*/
+@media (max-width: 1300px){
+    header a{
+        font-size:16px;
+    }
+    .first, .second, .third, .fourth{
+        padding:10em;
+    }
 }
