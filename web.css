@@ -1,68 +1,63 @@
 * {
+    margin: 0%;
+    padding: 0;
     text-decoration: none;
     list-style-type: none;
 }
 
-body {
-    padding: 0;
-    margin: 0;
-}
-
 .shampoo_backg_img {
-    background: url("shampoo_backg.png") center center no-repeat;
+    background: url("./img/shampoo_backg.png")
+    center center no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    height: 97vh;
 }
-
 
 .menubar {
     text-align: center;
-    padding-top: 25px;
-    padding-bottom: 30px;
-    
+    padding-top: 3%;
+    padding-bottom: 4%;
 }
 
 .menubar li {
     display: inline-block;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 2.4%;
+    padding-right: 2.4%;
 }
 
 .space {
-    margin: 100px;
-    padding-left: 100px;
-    padding-right: 100px;
+    margin: 70px;
+    padding-left: 6%;
+    padding-right: 6%;
 }
 
 .content {
     padding-top: 50px;
 }
 
+.center_box {
+    width: 50%;
+    padding-left: 30%;
+    padding-right: 20%;
+}
+
 .shortcut_button {
-    text-align: right;
-    padding-top: 50px;
-    padding-right: 50px;
+    float: right;
+    margin-top: 50px;
+    margin-right: 50px;
+    width: 150px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: #ccc;
 }
 .result_button {
-    padding-top: 50px;
-    padding-right: 50px;
+    margin-top: 50px;
+    margin-right: 50px;
+    width: 120px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: #ccc;
 }
-
-/*
-파일 업로드
-https://blog.naver.com/l1523/222554267809
-https://blog.naver.com/18rnjswldyd/222507908055
-
-https://blog.naver.com/alcmskfl17/221807281152
-https://amaze9001.tistory.com/69
-https://kakku.tistory.com/390
-https://kakku.tistory.com/386
-https://blog.naver.com/alcmskfl17/221807281152
-https://blog.naver.com/1012rnjsdydgns/222325981348
-https://blog.naver.com/xodbd0507/222490708563
-https://blog.naver.com/yujesang124/222030926798
-
-https://blog.naver.com/youhr21/222118740927
-https://www.functionofbeauty.com/
-https://www.acmicpc.net/
-*/
