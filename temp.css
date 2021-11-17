@@ -1,5 +1,6 @@
 @import url("https://unpkg.com/aos@2.3.1/dist/aos.css");
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
 
 * {
     text-decoration: none;
@@ -7,6 +8,7 @@
     color: inherit;
     word-wrap:break-word;
     word-break: keep-all;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 html {
     display: flex;
@@ -20,6 +22,7 @@ body {
     width: 100%;
     height: 100%;
     padding-top: 80px;
+    padding-bottom: 160px;
 
 }
 body, .middle, .wrapper, .first, .second, .third, .fourth{
@@ -78,11 +81,9 @@ header a:hover {
     align-items : center;
     justify-content: center;
     padding-left: 15.0em;
-    color:#f1f1f1;
-    cursor: default;
-    
 }
 .main_screen h2 {
+    color:#f1f1f1;
     font-size: 8.0em;
     font-family: 'Lobster', cursive;
     filter: drop-shadow(10px 10px 0px #000);
@@ -94,9 +95,12 @@ header a:hover {
 }
 .middle h2 {
     font-size: 50px;
+    font-weight: 700;
 }
 .middle p {
     font-size: 25px;
+    font-weight: 400;
+    color:#2e2e2e;
 }
 .first, .second, .third, .fourth{
     height: 20em;
@@ -119,7 +123,7 @@ header a:hover {
 .fourth{
     background-color: #e3eeff
 }
-.first .info_circle {
+.first .info_img {
     position: absolute;
     top:0; left:0; right:0; bottom:0;
     background: url("./img/shampoo_img_1.jpg") 
@@ -146,10 +150,36 @@ header a:hover {
     border-right: 1px solid #fff;
     box-shadow: -70px 0px 0px #bfd9fe;
 }
+.third .products_img {
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: url("./img/shampoo_img_3.jpg") 
+    center center no-repeat;
+    background-size: cover;
+    margin : 10em;
+    display: block;
+    width: 35%;
+    height:auto;
+    border-radius: 100%;
+    box-shadow: -30px -50px 0px #bfd9fe;
+}
+.fourth .subscribe_img {
+    position: absolute;
+    top:0; right:0; bottom:0;
+    background: url("./img/shampoo_img_4.jpg") 
+    center center no-repeat;
+    background-size: cover;
+    margin : 10em;
+    display: block;
+    width: 35%;
+    height:auto;
+    border-radius: 100%;
+    box-shadow: 70px 0px 0px #fad0c4;
+}
 .mainButton {
     margin-top:2em;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 400;
     color:#000000;
     background: transparent;
     width: 180px;
@@ -166,7 +196,7 @@ header a:hover {
     cursor: pointer;
     color: #ffffff;
     background-color: #000000;
-    border-color: #ffffff;
+    border-color: #000000;
     animation: b09_electric_blinkIn 0.1s step-end 0 2;
     -webkit-animation: b09_electric_blinkIn 0.1s step-end 0 2;
     -moz-animation: b09_electric_blinkIn 0.1s step-end 0 2;
@@ -183,7 +213,7 @@ header a:hover {
 
 /* 페이지 중간 부분 */
 .wrapper {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: auto;
     padding-left: 5%; 
     padding-right: 5%; 
@@ -191,6 +221,7 @@ header a:hover {
     min-height: 100vh;
     width: 100%;
 }
+
 .space {
     margin: 70px;
     padding-left: 6%;
@@ -198,8 +229,84 @@ header a:hover {
 }
 
 /*서비스 소개 페이지*/
-.space h3 {
-    font-size: 30px;
+.intro_top_img {
+    background: url("./img/intro_top_img.png") 
+    center center no-repeat;
+    background-size: cover;
+    width:100%; height: 250px;
+    display: flex;
+    align-items : center;
+    justify-content: flex-start;
+}
+.intro_top_img h2 {
+    color:#fad0c4;
+    padding-left: 1.0em;
+    font-size: 8.0em;
+    font-family: 'Lobster', cursive;
+    filter: drop-shadow(10px 10px 0px #000);
+}
+.space_tmp hr {
+    height:3px;
+    border:0px;
+    background-image: linear-gradient(45deg,#a18cd1 0%, #fbc2eb 100%);
+}
+.space_tmp h3 {
+    font-size: 50px;
+    font-weight: 700;
+    color:#2e2e2e;
+}
+.space_tmp p {
+    font-size: 22px;
+    padding : 2.0em;
+}
+.info_introduce {
+    text-align: center;
+}
+.info_introduce span {
+    color:#ff7a7e;
+}
+.service_info {
+    font-size:32px;
+    font-weight: 700;
+    text-align: center;
+}
+.Cards_info {
+    display: flex;
+    align-items : center;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+.info_card{
+    background: #fff;
+    text-align: center;
+    border: 1.5px solid #eeeeee;
+    border-radius: 5%;
+    height: 433px;
+    width: 300px;
+    padding: 10px;
+    margin: 5%;
+    box-shadow: 25px 20px 35px #bbbbbb;
+}
+.info_card h4 {
+    font-size: 1.3em;
+    color:#2e2e2e
+}
+.info_card .info_cardImg{
+    padding-top: 5%;
+    height: 30%;
+}
+.info_card .info_cardImg img{
+    height:100%;
+    width: auto;
+}
+.info_card .info_cardText h4{
+    font-size: 1.5em;
+    color:#2e2e2e
+}
+.info_card .info_cardText p{
+    font-size: 1.2em;
+    color:#2e2e2e;
+    padding:0;
 }
 
 /* 추천기 화면 */
@@ -211,7 +318,77 @@ header a:hover {
     padding-left: 30%;
     padding-right: 20%;
 }
+.button_area {
+    position: relative;
+    display: flex;
+    align-items : center;
+    justify-content: center;
+}
 .shortcut_button {
+    border: 0;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 8% 9% 8%;
+    position: relative;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-user-select: none;
+    cursor: default;
+    overflow: hidden;
+    border: #000000 solid 2px;
+}
+/**/
+.shortcut_button div {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 10px;
+}
+.shortcut_button div:nth-child(1) {
+    color: #000000;
+    background-color: transparent;
+}
+.shortcut_button div:nth-child(2) {
+    background-color: #000000;
+    width: 255px;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transform: translate(-250px, 0px) skewX(-30deg);
+    -webkit-transform: translate(-250px, 0px) skewX(-30deg);
+    -moz-transform: translate(-250px, 0px) skewX(-30deg);
+}
+.shortcut_button div:nth-child(3) {
+    color: #ffffff;
+    left: -200px;
+    transition: left 0.4s ease;
+    -webkit-transition: left 0.4s ease;
+    -moz-transition: left 0.4s ease;
+}
+.shortcut_button:hover div:nth-child(2) {
+    transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    transform: translate(-15px, 0px) skewX(-30deg);
+    -webkit-transform: translate(-15px, 0px) skewX(-30deg);
+    -moz-transform: translate(-15px, 0px) skewX(-30deg);
+}
+.shortcut_button:hover div:nth-child(3) {
+    left: 0px;
+    transition: left 0.4s ease;
+    -webkit-transition: left 0.4s ease;
+    -moz-transition: left 0.4s ease;
+}
+/**/
+.shortcut_button_temp {
     float: right;
     margin-top: 50px;
     margin-right: 50px;
@@ -222,6 +399,7 @@ header a:hover {
     border-radius: 2px;
     background-color: #ccc;
 }
+
 .result_button {
     margin-top: 50px;
     margin-right: 50px;
@@ -234,35 +412,55 @@ header a:hover {
 }
 
 /* 구독 창 css */
+.inner h1 {
+    font-size: 50px;
+}
+.inner p {
+    font-size: 22px;
+}
+.inner span {
+    color:#7bb2ff;
+}
+.plans {
+    padding-top: 50px;
+}
 .plan {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items : center;
     margin: auto;
-    
+}
+.plan h2 {
+    font-size: 2.0em;
+}
+.plan h3 {
+    font-size: 2.0em;
 }
 .planA, .planB, .planC {
-    width: 180px; height:200px;
+    width: 300px; height:433px;
     text-align: center;
     margin: 30px 3px;
+    border: 1.5px solid #b9b9b9;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px #dddddd;
 }
 .planA {
-    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    background-image: #fff;
 }
 .planB {
-    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    background-image: #fff;
 }
 .planC {
-    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    background-image: #fff;
 }
 .planButton {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color:#000000;
     background: #ffffff;
-    width: 80px;
-    height: 30px;
+    width: 190px;
+    height: 50px;
     border: 0.5px solid;
     border-radius: 20px;
     text-align: center;
@@ -281,6 +479,26 @@ header a:hover {
     -webkit-transition: all 0.2s ease 0.2s;
     -moz-transition: all 0.2s ease 0.2s;
 }
+.recommand_direct {
+    width:100%;
+    height: 500px;
+    background-color: #e3eeff;
+    display: flex;
+    flex-direction : column;
+    align-items: center;
+    justify-content: center;
+}
+.recommand_direct span{
+    font-size: 3.0em;
+    font-weight: 700;
+}
+.recommand_direct p{
+    font-size: 1.8em;
+    text-align: center;
+    font-weight: 500;
+
+}
+
 
 /* 상품 목록 css */
 .productList{
@@ -347,7 +565,7 @@ footer
     color: white;
     background: #ff9a9e;
     width: 100%;
-    height: 100px;
+    height: 160px;
     bottom: 0;
     left: 0;
     display: flex;
