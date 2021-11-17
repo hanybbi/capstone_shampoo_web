@@ -6,10 +6,10 @@ shampoo_data = [['name', 'brand', 0, 0, 2, 2, 0],
 
 function find_shampoo() {
     // 사용자가 선택한 값 가져오기
-    var hair_type = document.querySelector("#hair_type").value;
-    var hair_structure = document.querySelector("#hair_structure").value;
-    var hair_moisture = document.querySelector("#hair_moisture").value;
-    var hair_alopecia = document.querySelector("#hair_alopecia").value;
+    var hair_type = document.getElementById("hair_type").value;
+    var hair_structure = document.getElementById("hair_structure").value;
+    var hair_moisture = document.getElementById("hair_moisture").value;
+    var hair_alopecia = document.getElementById("hair_alopecia").value;
 
     const user_data =
     [hair_type, hair_structure, hair_moisture, hair_alopecia];
