@@ -4,7 +4,7 @@ shampoo_data = [['name', 'brand', 0, 0, 2, 2, 0],
 // 적절한 샴푸 찾아서 출력
 // id는 나중에 html 수정할게요
 
-function find_shampoo() {
+function get_input() {
     // 사용자가 선택한 값 가져오기
     var hair_type = document.getElementById("hair_type").value;
     var hair_structure = document.getElementById("hair_structure").value;
@@ -14,6 +14,11 @@ function find_shampoo() {
     const user_data =
     [hair_type, hair_structure, hair_moisture, hair_alopecia];
 
+    return user_data
+}
+
+
+function find_shampoo(user_data) {
     // 매칭되는 샴푸 찾기
     var result = new Array();
     for (var i = 0; i < shampoo_data.length; i++) {
