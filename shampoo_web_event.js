@@ -3,8 +3,6 @@ shampoo_data = [['name', 'brand', 0, 0, 2, 2, 0],
 
 // 적절한 샴푸 찾아서 출력
 // id는 나중에 html 수정할게요
-var result_button = document.querySelector("#result_button");
-result_button.onclick = find_shampoo;
 
 function find_shampoo() {
     // 사용자가 선택한 값 가져오기
