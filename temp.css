@@ -205,10 +205,10 @@ header a:hover {
     -moz-transition: all 0.2s ease 0.2s;
 }
 .first .mainButton {
-    margin-left:68%;
+    margin-left:65%;
 }
 .third .mainButton {
-    margin-left:58%;
+    margin-left:53%;
 }
 
 /* 페이지 중간 부분 */
@@ -222,7 +222,7 @@ header a:hover {
     width: 100%;
 }
 
-.space {
+.space_tmp {
     margin: 70px;
     padding-left: 6%;
     padding-right: 6%;
@@ -245,19 +245,19 @@ header a:hover {
     font-family: 'Lobster', cursive;
     filter: drop-shadow(10px 10px 0px #000);
 }
-.space_tmp hr {
+.space hr {
     height:3px;
     border:0px;
     background-image: linear-gradient(45deg,#a18cd1 0%, #fbc2eb 100%);
 }
-.space_tmp h3 {
+.space h3 {
     font-size: 50px;
     font-weight: 700;
-    color:#2e2e2e;
 }
-.space_tmp p {
+.space p {
     font-size: 22px;
-    padding : 2.0em;
+    padding : 10px; /*2.0em*/
+    color:#2e2e2e;
 }
 .info_introduce {
     text-align: center;
@@ -387,6 +387,9 @@ header a:hover {
     -webkit-transition: left 0.4s ease;
     -moz-transition: left 0.4s ease;
 }
+.shortcut_button a {
+    display: block;
+}
 /**/
 .shortcut_button_temp {
     float: right;
@@ -410,6 +413,24 @@ header a:hover {
     border-radius: 2px;
     background-color: #ccc;
 }
+/* 추천 결과창 */
+.recommend_card {
+    background: #fff;
+    text-align: center;
+    border: 1.5px solid #c2c2c2;
+    border-radius: 5%;
+    height: 433px;
+    width: 300px;
+    padding: 10px;
+    margin: 5%;
+}
+.recommend_card img {
+    height : 65%;
+    margin-bottom: 1.3em;
+}
+.recommend_card p {
+    font-size: 20px;
+}
 
 /* 구독 창 css */
 .inner h1 {
@@ -417,9 +438,13 @@ header a:hover {
 }
 .inner p {
     font-size: 22px;
+    color:#2e2e2e;
 }
 .inner span {
     color:#7bb2ff;
+}
+.planTitle {
+    text-align: center;
 }
 .plans {
     padding-top: 50px;
@@ -435,10 +460,27 @@ header a:hover {
     font-size: 2.0em;
 }
 .plan h3 {
-    font-size: 2.0em;
+    font-size: 1.8em;
+}
+.plan em {
+    font-size: 1.2em;
+}
+.plan p {
+    padding: 0.3em 0 0.3em 0;
+    margin:0.3em;
+    font-size: 1.1em;
+    text-align: left;
+    color:#2e2e2e;
+}
+.plan_info {
+    display: flex;
+    align-items : center;
+    justify-content: space-between;
+    border-bottom : 1px solid #b9b9b9;
 }
 .planA, .planB, .planC {
-    width: 300px; height:433px;
+    width: 300px; height:400px;
+    padding : 2em;
     text-align: center;
     margin: 30px 3px;
     border: 1.5px solid #b9b9b9;
@@ -455,6 +497,7 @@ header a:hover {
     background-image: #fff;
 }
 .planButton {
+    margin-top: 1.5em;
     font-size: 20px;
     font-weight: bold;
     color:#000000;
