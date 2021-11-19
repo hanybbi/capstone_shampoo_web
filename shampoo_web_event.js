@@ -1,6 +1,7 @@
-shampoo_data = [['name', 'brand', 0, 0, 0, 0],
-                ['name2', 'brand1', 0, 0, 0, 0],
-                ['name3', 'brand3', 0, 0, 0, 0]];
+shampoo_data = [['name1', 'brand1', "./asset/2.png", 0, 0, 0, 0],
+                ['name2', 'brand2', "./asset/3.png", 0, 0, 0, 0],
+                ['name3', 'brand3', "./asset/4.png", 0, 0, 0, 0]];
+                // 이름, 브랜드, 이미지, 타입, 구조, 건지성, 탈모
 
 
 function get_input() {
@@ -45,10 +46,9 @@ function find_shampoo() {
     // 매칭되는 샴푸 찾기
     for (var i = 0; i < shampoo_data.length; i++) {
         var data = shampoo_data[i];
-        if (user_data == data.slice(2).toString()) {
+        if (user_data == data.slice(3).toString()) {
             // 세션 스토리지에 저장
-            sessionStorage.setItem("name"+i, data[0]);
-            sessionStorage.setItem("brand"+i, data[1]);
+            sessionStorage.setItem("selected_index"+i, i);
         }
     }
     // 결과 화면 열기
@@ -58,25 +58,24 @@ function find_shampoo() {
 
 function display_shampoo() {
     // 웹페이지에 표시
-
-    // 매칭 샴푸가 하나
-    document.getElementById("shampoo_name").innerText = sessionStorage.getItem("name0");
-    document.getElementById("shampoo_brand").innerText = sessionStorage.getItem("brand0");
-    
-    // 매칭 샴푸가 둘 이상
     // 테그 만들어서 데이터 넣기
-    if (sessionStorage.length>2) {
-        for (var i = 1; i < sessionStorage.length/2; i++) {
-            // element 생성하고 데이터 넣기
-            var new_shamoponame = document.createElement("p");
-            new_shamoponame.innerText = sessionStorage.getItem("name"+i);
-            var new_shampoobrand = document.createElement("p");
-            new_shampoobrand.innerText = sessionStorage.getItem("brand"+i);
+    for (var i = 0; i < sessionStorage.length; i++) {
+        var key = sessionStorage.key(i);
+        var val = sessionStorage.getItem(key);
+        var selected_shampoo = shampoo_data[val];
 
-            // 상위 element에 연결
-            var parent = document.getElementById("display_selected_shampoo");
-            parent.appendChild(new_shamoponame);
-            parent.appendChild(new_shampoobrand);
-        }
+        // element 생성하고 데이터 넣기
+        var new_shampooName = document.createElement("p");
+        new_shampooName.innerText = selected_shampoo[0];
+        var new_shampooBrand = document.createElement("p");
+        new_shampooBrand.innerText = selected_shampoo[1];
+        var new_shampooImg = document.createElement("img");
+        new_shampooImg.src = selected_shampoo[2];
+
+        // 상위 element에 연결
+        var parent = document.getElementById("display_selected_shampoo");
+        parent.appendChild(new_shampooImg);
+        parent.appendChild(new_shampooName);
+        parent.appendChild(new_shampooBrand);
     }
 }
