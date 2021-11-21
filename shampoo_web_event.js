@@ -1,6 +1,6 @@
 shampoo_data = [['name1', 'brand1', "./asset/2.png", 0, 0, 0, 0],
-                ['name2', 'brand2', "./asset/3.png", 0, 0, 0, 0],
-                ['name3', 'brand3', "./asset/4.png", 0, 0, 0, 0]];
+                ['name2', 'brand2', "./asset/3.png", 0, 1, 0, 0],
+                ['name3', 'brand3', "./asset/4.png", 0, 1, 0, 0]];
                 // 이름, 브랜드, 이미지, 타입, 구조, 건지성, 탈모
 
 
@@ -60,11 +60,14 @@ function display_shampoo() {
     // 웹페이지에 표시
     // 테그 만들어서 데이터 넣기
     for (var i = 0; i < sessionStorage.length; i++) {
+        // 표시될 값
         var key = sessionStorage.key(i);
         var val = sessionStorage.getItem(key);
         var selected_shampoo = shampoo_data[val];
 
         // element 생성하고 데이터 넣기
+        var new_div = document.createElement("div");
+        new_div.setAttribute("class", "recommend_card");
         var new_shampooName = document.createElement("p");
         new_shampooName.innerText = selected_shampoo[0];
         var new_shampooBrand = document.createElement("p");
@@ -74,8 +77,9 @@ function display_shampoo() {
 
         // 상위 element에 연결
         var parent = document.getElementById("display_selected_shampoo");
-        parent.appendChild(new_shampooImg);
-        parent.appendChild(new_shampooName);
-        parent.appendChild(new_shampooBrand);
+        parent.appendChild(new_div);
+        new_div.appendChild(new_shampooImg);
+        new_div.appendChild(new_shampooName);
+        new_div.appendChild(new_shampooBrand);
     }
 }
