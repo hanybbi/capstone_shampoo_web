@@ -44,14 +44,18 @@ header {
     background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
 
 }
-header a{
+.menubar li a{
     display: block;
     align-items : center;
     justify-content: space-around;
     font-size: 20px;
     padding: 0.92em;
 }
-header a:hover {
+.menubar li a:hover{
+    color: #2b5876;
+    border-bottom: solid 1px #ffffff;
+}
+.menubar li a.on {
     color: #2b5876;
     border-bottom: solid 1px #ffffff;
 }
@@ -135,6 +139,7 @@ header a:hover {
     height:auto;
     border-radius: 100%;
     box-shadow: 30px 50px 0px #ff9a9e;
+    object-fit: cover;
 }
 .second .shampoo_img {
     position: absolute;
@@ -149,6 +154,7 @@ header a:hover {
     border-radius: 100%;
     border-right: 1px solid #fff;
     box-shadow: -70px 0px 0px #bfd9fe;
+    object-fit: cover;
 }
 .third .products_img {
     position: absolute;
@@ -162,6 +168,7 @@ header a:hover {
     height:auto;
     border-radius: 100%;
     box-shadow: -30px -50px 0px #bfd9fe;
+    object-fit: cover;
 }
 .fourth .subscribe_img {
     position: absolute;
@@ -175,8 +182,9 @@ header a:hover {
     height:auto;
     border-radius: 100%;
     box-shadow: 70px 0px 0px #fad0c4;
+    object-fit: cover;
 }
-.mainButton {
+.mainButton, .result_button {
     margin-top:2em;
     font-size: 20px;
     font-weight: 400;
@@ -192,7 +200,7 @@ header a:hover {
     justify-content: center;
     cursor: default;
 }
-.mainButton:hover {
+.mainButton:hover, .result_button:hover {
     cursor: pointer;
     color: #ffffff;
     background-color: #000000;
@@ -310,19 +318,126 @@ header a:hover {
 }
 
 /* 추천기 화면 */
+.recommend_top span {
+    color : #ff7a7e;
+}
+.center_box {
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items : center;
+    justify-content: center;
+}
+.center_box h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
 .content {
     padding-top: 50px;
 }
-.center_box {
-    width: 50%;
-    padding-left: 30%;
-    padding-right: 20%;
+/*
+.filebox {
+    display: flex;
+    align-items : center;
+    justify-content: flex-start;
+}
+.filebox input[type="file"]{
+    display:none;
+}
+.filebox .file_input {
+    display: flex;
+    align-items : center;
+    justify-content: center;
+    width: 240px;
+    height: 50px;
+    background-color: #fad0c4;
+    border-radius: 15px;
+
+}
+*/
+.check_list {
+    text-align: center;
+    color:#2e2e2e;
+}
+.check_list input[type="radio"] {
+    display:none;
+}
+.check_list input[type="radio"]:checked + .checkbox {
+    background-color: #2a5298;
+    border : 1px solid #fff;
+}
+.check_list input[type="radio"]:checked + .checkbox img {
+    filter: brightness(600%);
+}
+
+.check_list em {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    border-left: 1px solid #b6b6b6;
+    border-right: 1px solid #b6b6b6;
+    padding : 0 0.8em 0 0.8em;
+}
+.check_list span {
+    font-size: 18px;
+    font-weight: 500;
+    cursor:pointer;
+
+}
+.check_type {
+    display: flex;
+    align-items : center;
+    justify-content: center;
+    margin:1.2em 1.2em 5.0em 1.2em
+}
+.checkbox {
+    width:130px;
+    height:130px;
+    margin:1.0em 1.0em 1.0em 1.0em;
+    border : 1px solid #c2c2c2;
+    border-radius: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items : center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+.checkbox img{
+    width:100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.subscribe_direct {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items : center;
+    justify-content: center;
+    height:500px;
+    width: 100%;
+    margin-top: 3.0em;
+    background-color: #e3eeff;
+}
+.subscribe_direct span{
+    font-size: 2.5em;
+    font-weight: 700;
+}
+.subscribe_direct p{
+    font-size: 1.8em;
+    text-align: center;
+    font-weight: 500;
+
 }
 .button_area {
     position: relative;
     display: flex;
     align-items : center;
     justify-content: center;
+
 }
 .shortcut_button {
     border: 0;
@@ -390,30 +505,17 @@ header a:hover {
 .shortcut_button a {
     display: block;
 }
-/**/
-.shortcut_button_temp {
-    float: right;
-    margin-top: 50px;
-    margin-right: 50px;
-    width: 150px;
-    line-height: 30px;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    background-color: #ccc;
-}
 
-.result_button {
-    margin-top: 50px;
-    margin-right: 50px;
-    width: 120px;
-    line-height: 30px;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    background-color: #ccc;
-}
 /* 추천 결과창 */
+.result_top span{
+    color:#7bb2ff;
+}
+.recommend_result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items : center;
+}
 .recommend_card {
     background: #fff;
     text-align: center;
@@ -421,15 +523,22 @@ header a:hover {
     border-radius: 5%;
     height: 433px;
     width: 300px;
-    padding: 10px;
+    padding: 5%;
     margin: 5%;
 }
 .recommend_card img {
     height : 65%;
-    margin-bottom: 1.3em;
+    margin-bottom: 0.2em;
 }
 .recommend_card p {
     font-size: 20px;
+    font-weight: 500;
+}
+.subscribe_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items : center;
 }
 
 /* 구독 창 css */
@@ -556,19 +665,20 @@ header a:hover {
     text-align: center;
     margin: 30px 30px;
     border: 1px solid #eeeeee;
-    height: 300px;
-    width: 200px;
+    height: 350px;
+    width: 250px;
     padding: 10px;
 }
 .cardImg{
-    height: 150px;
+    margin-top: 5%;
+    height: 50%;
 }
 .cardImg img{
     height:100%;
     width: auto;
 }
 .cardText h4{
-    font-size: 14px;
+    font-size: 18px;
 }
 .cardText p{
     text-align: center;
@@ -577,12 +687,12 @@ header a:hover {
 }
 .cardButton{
     align-items : left;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     color:#000000;
     background: #ffffff;
-    width: 80px;
-    height: 28px;
+    width: 120px;
+    height: 35px;
     border: 0.5px solid;
     border-radius: 10px;
     text-align: center;
