@@ -5,14 +5,7 @@
         <meta charset = "utf-8">
         <meta name = "viewport" content = "width=device-width, initial-scale=1, user-scalable=no">
         <link rel = "stylesheet" href="temp.css" type="text/css">
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="shampoo_web_event.js"></script>
-        <script>
-             $( document ).ready( function() {
-                AOS.init();
-             });
-        </script>
     </head>
     <body onload="display_product()">
         <!-- 상단 바 -->
@@ -23,7 +16,7 @@
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./intro_service.html">about service</a></li>
                     <li><a href="./recommand_service.html">recommend</a></li>
-                    <li><a href="./products.html">products list</a></li>
+                    <li><a class="active" href="./products.html">products list</a></li>
                     <li><a href="./subscribe.html">subscribe</a></li>
                 </ul>
             </div>
@@ -39,29 +32,7 @@
                 </div>
             </section>
             <section id="middle" class="productList">
-
-                <!-- 예시 내용 -->
-                <div class="card">
-                    <div class = "cardImg">
-                        <img src = "./img/shampoo.png" alt="">
-                    </div>
-                    <div class = "cardText">
-                        <h4>어쩌구 샴푸</h4>
-                        <p>39000원</p>
-                        <button class = "cardButton" type = "button">살펴보기</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class = "cardImg">
-                        <img src = "./img/shampoo.png" alt="">
-                    </div>
-                    <div class = "cardText">
-                        <h4>어쩌구 샴푸</h4>
-                        <p>39000원</p>
-                        <button class = "cardButton" type = "button">살펴보기</button>
-                    </div>
-                </div>
-
+                <!--상품 표시-->
             </section>
         </div>
 

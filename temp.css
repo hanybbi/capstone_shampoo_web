@@ -14,7 +14,6 @@ html {
     display: flex;
     align-items : center;
     justify-content: center;
-    scroll-behavior:smooth;
 }
 body {
     padding: 0;
@@ -51,11 +50,11 @@ header {
     font-size: 20px;
     padding: 0.92em;
 }
-.menubar li a:hover{
+.menubar li a:hover, .menubar li .active{
     color: #2b5876;
     border-bottom: solid 1px #ffffff;
 }
-.menubar li a.on {
+#top_menu ul li.on a{
     color: #2b5876;
     border-bottom: solid 1px #ffffff;
 }
@@ -86,9 +85,9 @@ header {
     justify-content: center;
     padding-left: 15.0em;
 }
-.main_screen h2 {
+.main_screen span {
     color:#f1f1f1;
-    font-size: 8.0em;
+    font-size: 9.0em;
     font-family: 'Lobster', cursive;
     filter: drop-shadow(10px 10px 0px #000);
 }
@@ -517,14 +516,16 @@ header {
     align-items : center;
 }
 .recommend_card {
+    
     background: #fff;
     text-align: center;
     border: 1.5px solid #c2c2c2;
     border-radius: 5%;
-    height: 433px;
-    width: 300px;
+    height: 500px;
+    width: 390px;
     padding: 5%;
     margin: 5%;
+    
 }
 .recommend_card img {
     height : 65%;
@@ -665,9 +666,10 @@ header {
     text-align: center;
     margin: 30px 30px;
     border: 1px solid #eeeeee;
-    height: 350px;
+    height: 400px;
     width: 250px;
     padding: 10px;
+    overflow : auto;
 }
 .cardImg{
     margin-top: 5%;
