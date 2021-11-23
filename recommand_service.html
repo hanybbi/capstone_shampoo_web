@@ -5,6 +5,13 @@
         <meta charset = "utf-8">
         <link rel="stylesheet" href="temp.css" type="text/css">
         <script src="shampoo_web_event.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+             $( document ).ready( function() {
+                AOS.init();
+             });
+        </script>
     </head>
 
     <body>
@@ -14,7 +21,7 @@
                 <ul class="menubar">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./intro_service.html">about service</a></li>
-                    <li><a href="./recommand_service.html">recommend</a></li>
+                    <li><a class="active" href="./recommand_service.html">recommend</a></li>
                     <li><a href="./products.html">products list</a></li>
                     <li><a href="./subscribe.html">subscribe</a></li>
                 </ul>
@@ -26,58 +33,131 @@
         <!-- 샴푸 추천 페이지 내용 -->
         <div class = "wrapper">
             <div class="space">
-                    <h3>샴푸 추천</h3>
-                <p>
-                    샴푸 추천이 뭐하는 프로그램인지 써두기
-                    <br>
-                    사진을 올리면 어쩌구 저쩌구
-                </p>
-
+                <div class="recommend_top">
+                    <h3>샴푸 <span>추천</span></h3>
+                    <p>
+                        아래에 모발 타입을 선택해보세요.
+                        <br>
+                        당신의 모발에 맞는, 최적의 샴푸를 추천합니다.
+                    </p>
+                </div>
                 <div class="center_box">
-                    <p class="content">
+                    <!--
+                    <div class="content">
                         사진 업로드 란
                         <br>
                         <div class="filebox">
-                            <input type="file" accept=".png, .jpg">
+                            <label class="file_input" for="input-file">
+                                모발 사진 업로드하기    
+                            </label>
+                            <input type="file" id="input-file" accept=".png, .jpg">
                         </div>
                         <br>
                         업로드한 사진이 페이지에 보이게
-                    </p>
-                    <p class="content">
-                        질문 리스트
-                        <br>
-                        <label><input type="radio" name="hair_type" value="0">헤어 타입 1</label><br>
-                        <label><input type="radio" name="hair_type" value="1">헤어 타입 2</label><br>
-                        <label><input type="radio" name="hair_type" value="2">헤어 타입 3</label><br>
-                        <br>
-                        <label><input type="radio" name="hair_structure" value="0">헤어 구조 1</label><br>
-                        <label><input type="radio" name="hair_structure" value="1">헤어 구조 2</label><br>
-                        <label><input type="radio" name="hair_structure" value="2">헤어 구조 3</label><br>
-                        <br>
-                        <label><input type="radio" name="hair_moisture" value="0">헤어 건지성 1</label><br>
-                        <label><input type="radio" name="hair_moisture" value="1">헤어 건지성 2</label><br>
-                        <label><input type="radio" name="hair_moisture" value="2">헤어 건지성 3</label><br>
-                        <br>
-                        <label><input type="radio" name="hair_alopecia" value="0">탈모 1</label><br>
-                        <label><input type="radio" name="hair_alopecia" value="1">탈모 2</label><br>
-                        <br>
-                    </p>
+                    </div>
+                    -->
+                    <div class="check_list">
+                        <p>질문 리스트</p>
+                        <em>헤어 타입</em>
+                        <div class="check_type">
+                            <label><input type="radio" name="hair_type" value="0">
+                                <div class="checkbox">
+                                    <img src="./img/hair_type_1.png" alt="">
+                                </div>
+                                <span>직모</span>
+                            </label>
+                            <label><input type="radio" name="hair_type" value="1">
+                                <div class="checkbox">
+                                    <img src="./img/hair_type_2.png" alt="">
+                                </div>
+                                <span>반곱슬</span>
+                            </label>
+                            <label><input type="radio" name="hair_type" value="2">
+                                <div class="checkbox">
+                                    <img src="./img/hair_type_3.png" alt="">
+                                </div>
+                                <span>곱슬</span>
+                            </label>
+                        </div>
+                        
+                        <em>헤어 구조</em>
+                        <div class="check_type">
+                            <label><input type="radio" name="hair_structure" value="0">
+                                <div class="checkbox">
+                                    <img src="./img/hair_structure_1.png" alt="">
+                                </div>
+                                <span>얇음</span>
+                            </label>
+                            <label><input type="radio" name="hair_structure" value="1">
+                                <div class="checkbox">
+                                    <img src="./img/hair_structure_2.png" alt="">
+                                </div>
+                                <span>보통</span>
+                            </label>
+                            <label><input type="radio" name="hair_structure" value="2">
+                                <div class="checkbox">
+                                    <img src="./img/hair_structure_3.png" alt="">
+                                </div>
+                                <span>두꺼움</span>
+                            </label>
+                        </div>
+                        
+                        <em>헤어 건지성</em>
+                        <div class="check_type">
+                            <label><input type="radio" name="hair_moisture" value="0">
+                                <div class="checkbox">
+                                    <img src="./img/scalp_1.png" alt="">
+                                </div>
+                                <span>건조</span>
+                            </label>
+                            <label><input type="radio" name="hair_moisture" value="1">
+                                <div class="checkbox">
+                                    <img src="./img/scalp_2.png" alt="">
+                                </div>
+                                <span>보통</span>
+                            </label>
+                            <label><input type="radio" name="hair_moisture" value="2">
+                                <div class="checkbox">
+                                    <img src="./img/scalp_3.png" alt="">
+                                </div>
+                                <span>기름짐</span>
+                            </label>
+                        </div>
 
-                    <ul class="result_button">
-                        <li>
-                            <a onclick="find_shampoo()">결과 보기</a>
-                        </li>
-                    </ul>
+                        <em>탈모 여부</em>
+                        <div class="check_type">
+                            <label><input type="radio" name="hair_alopecia" value="0">
+                                <div class="checkbox">
+                                    <img src="./img/whether_no.png" alt="">
+                                </div>
+                                <span>무</span>
+                            </label>
+                            <label><input type="radio" name="hair_alopecia" value="1">
+                                <div class="checkbox">
+                                    <img src="./img/whether_yes.png" alt="">
+                                </div>
+                                <span>유</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="result_button">
+                        <a onclick="find_shampoo()">결과 보기</a>
+                    </div>
                 </div>
-
-                <ul class="shortcut_button_temp">
-                    <li>
-                        <a href="./subscribe.html">구독창 바로가기</a>
-                    </li>
-                </ul>
             </div>
         </div>
-
+        <div class="subscribe_direct" data-aos="fade-down" data-aos-duration="1300">
+            <p>
+                <span>STOP</span><br>
+                이미 당신의 맞춤 샴푸를 알고 있나요?<br>
+                정기 배달을 신청해보세요
+            </p>
+            <div class="shortcut_button">
+                <div><a href="./subscribe.html">구독창 바로가기</a></div>
+                <div></div>
+                <div><a href="./subscribe.html">구독창 바로가기</a></div>
+            </div>
+        </div>
         <footer>
             <div class = footer>
                 <p>2021 Dankook University Capstone_Elastin</p>
