@@ -335,7 +335,7 @@ header {
 .content {
     padding-top: 50px;
 }
-/*
+
 .filebox {
     display: flex;
     align-items : center;
@@ -354,7 +354,7 @@ header {
     border-radius: 15px;
 
 }
-*/
+
 .check_list {
     text-align: center;
     color:#2e2e2e;
