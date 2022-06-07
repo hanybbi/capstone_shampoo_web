@@ -42,20 +42,7 @@
                     </p>
                 </div>
                 <div class="center_box">
-                    <!--
-                    <div class="content">
-                        사진 업로드 란
-                        <br>
-                        <div class="filebox">
-                            <label class="file_input" for="input-file">
-                                모발 사진 업로드하기    
-                            </label>
-                            <input type="file" id="input-file" accept=".png, .jpg">
-                        </div>
-                        <br>
-                        업로드한 사진이 페이지에 보이게
-                    </div>
-                    -->
+                    
                     <div class="check_list">
                         <p>질문 리스트</p>
                         <em>헤어 타입</em>
@@ -125,14 +112,28 @@
                         </div>
 
                         <em>탈모 여부</em>
+
+                        
+                    <!-- 이미지 업로드 -->
+                    <div class="content">
+                        <img src="" id="filebox_img">
+                        <div class="filebox">
+                            <label class="file_input" for="input-file">
+                                모발 사진 업로드하기    
+                            </label>
+                            <br>
+                            <input type="file" id="input-file" accept="image/*" onchange="get_hair_alopecia()">
+                        </div>
+                    </div>
+
                         <div class="check_type">
-                            <label><input type="radio" name="hair_alopecia" value="0">
+                            <label><input type="radio" id="no_hair_alopecia" name="hair_alopecia" value="0">
                                 <div class="checkbox">
                                     <img src="./img/whether_no.png" alt="">
                                 </div>
                                 <span>무</span>
                             </label>
-                            <label><input type="radio" name="hair_alopecia" value="1">
+                            <label><input type="radio" id="yes_hair_alopecia" name="hair_alopecia" value="1">
                                 <div class="checkbox">
                                     <img src="./img/whether_yes.png" alt="">
                                 </div>
@@ -140,6 +141,9 @@
                             </label>
                         </div>
                     </div>
+
+
+
                     <div class="result_button">
                         <a onclick="find_shampoo()">결과 보기</a>
                     </div>
