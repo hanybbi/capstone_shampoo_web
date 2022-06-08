@@ -206,3 +206,22 @@ function display_product() {
         txt_div.appendChild(new_detailButton);
     }
 }
+
+function get_hair_alopecia() {
+    // 탈모 여부 판단
+    var hair_alopecia;
+    var random_num = Math.floor(Math.random()*10);  // 0 ~ 9
+
+    // 탈모 없음
+    if (random_num <= 8) {
+        hair_alopecia = document.getElementById("no_hair_alopecia");
+        hair_alopecia.checked = true;
+    }
+
+    // 탈모 있음
+    else {
+        hair_alopecia = document.getElementById("yes_hair_alopecia");
+        hair_alopecia.checked = true;
+    }
+
+}
